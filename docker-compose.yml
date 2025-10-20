@@ -1,0 +1,17 @@
+services:
+  bds:
+    container_name: minecraft
+    image: itzg/minecraft-bedrock-server
+    restart: unless-stopped
+    environment:
+      EULA: "TRUE"
+    ports:
+      - "19132:19132/udp"
+    volumes:
+      - ./data:/data
+    stdin_open: true
+    tty: true
+
+networks:
+  my_network:
+    name: "my_network"
