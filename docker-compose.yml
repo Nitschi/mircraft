@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     environment:
       EULA: "TRUE"
+      ALLOW_LIST: true
     ports:
       - "19132:19132/udp"
     volumes:
